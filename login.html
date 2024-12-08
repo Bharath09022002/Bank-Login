@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Banking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="transaction.html">Transactions</a></li>
+            <li><a href="transaction-history.html">Transaction History</a></li>
+        </ul>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" required placeholder="Enter your username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="Enter your password">
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <p>Don't have an account? <button id="createAccountButton">Create New Account</button></p>
+    </div>
+
+    <!-- Create Account Modal -->
+    <div id="createAccountModal" class="modal">
+        <div class="modal-content">
+            <h3>Create New Account</h3>
+            <form id="createAccountForm">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" required placeholder="Enter a username">
+
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" required placeholder="Enter a password">
+
+                <button type="submit">Create Account</button>
+            </form>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

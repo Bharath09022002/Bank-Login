@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App - Transactions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="transaction.html">Transactions</a></li>
+            <li><a href="transaction-history.html">Transaction History</a></li>
+        </ul>
+    </div>
+
+    <div class="transaction-container">
+        <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
+        <h3>Banking Transactions</h3>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('withdraw')">Withdraw</button>
+            <button class="tab-button" onclick="showTab('deposit')">Deposit</button>
+        </div>
+        
+        <div id="withdraw" class="tab-content">
+            <h3>Withdraw Funds</h3>
+            <form id="withdrawForm">
+                <input type="number" id="withdrawAmount" placeholder="Amount to Withdraw" required>
+                <button type="submit">Withdraw</button>
+            </form>
+        </div>
+        
+        <div id="deposit" class="tab-content" style="display: none;">
+            <h3>Deposit Funds</h3>
+            <form id="depositForm">
+                <input type="number" id="depositAmount" placeholder="Amount to Deposit" required>
+                <button type="submit">Deposit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const username = localStorage.getItem("username");
+        if (username) {
+            document.getElementById("usernameDisplay").textContent = username;
+        } else {
+            alert("Please log in first.");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Banking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="transaction.html">Transactions</a></li>
+            <li><a href="transaction-history.html">Transaction History</a></li>
+        </ul>
+    </div>
+
+    <div class="history-container">
+        <h2>Transaction History</h2>
+
+        <table id="transactionHistory">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Transaction Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transactions will be populated here -->
+            </tbody>
+        </table>
+
+        <!-- Clear History Button -->
+        <button id="clearHistoryButton" class="clear-button">Clear History</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
